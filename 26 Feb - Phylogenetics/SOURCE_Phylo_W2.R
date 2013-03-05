@@ -1,6 +1,6 @@
 ####Phylogenetics SOURCE####
 #Week Two#
-#Note that in RStudio if you put four #'s by some words it becomes an index point. This means that you can click the # tag at the bottom of this window, just above 'Console' and select a particular phrase.
+#Note that in RStudio if you put four #s by some words it becomes an index point. This means that you can click the # tag at the bottom of this window, just above 'Console' and select a particular phrase.
 #There's normally two things that you'll need when you come to perfoming comparative methods in R, a tree file and some trait data (continious or discrete).
 
 #First, let's focus on the tree.
