@@ -31,7 +31,7 @@ Final[,3]<-as.numeric(Final[,3])
 #install.packages("ggplot2") #If you need to.
 require(ggplot2)
 
-ggplot(data = Final, aes(x = AandB, y = Data1)) +  geom_barplot(aes(fill = CandD), width = 0.8) + theme_grey()
+ggplot(data = Final, aes(x = AandB, y = Data1)) +  geom_boxplot(aes(fill = CandD), width = 0.8) + theme_grey()
 
 
 ####Error Bars####
