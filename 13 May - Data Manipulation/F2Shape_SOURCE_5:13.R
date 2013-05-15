@@ -24,15 +24,14 @@ while(i < n){
   i <- i+10
 }
 
-UJcoordinates <- UJcentroid[output,]
-head(UJcoordinates)
-write.csv(UJcoordinates,"UJcoordinates.csv")
+UJint <- UJcentroid[output,]
 
-# to find average x and y values for each individual
-UJint <- read.csv("UJcoordinates.csv", header=T)
-head(UJint)
+UJint[,1]<-as.character(UJint[,1])
+UJint[,1]<-as.numeric(UJint[,1])
+
 str(UJint)
 
+# to find average x and y values for each individual
 i <- 1
 n <- 930
 
@@ -71,16 +70,10 @@ for(i in 1:(length(Ymeans))){
   tempY <- rep(Ymeans[i],6)
   outputY <- c(outputY,tempY)
 }
-#subtracts each landmark from the average and squares it
-distX <- NULL
-for(i in 1:length(UJint$V1)){
-  distX[i] <- ((outputX[i]-UJint$V1[i])^2)
-}
 
-distY <- NULL
-for(i in 1:length(UJint$V2)){
-  distY[i] <- ((outputY[i]-UJint$V2[i])^2)
-}
+#subtracts each landmark from the average and squares it
+distX<-(outputX-UJint$V1)^2
+distY<-(outputY-UJint$V2)^2
 
 distX
 distY
