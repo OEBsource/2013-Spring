@@ -29,7 +29,7 @@ sqrt(var(plant.seed))
 y <- 0:9
 prob <- dpois(y, lambda = 3.56)
 plot(y, prob, type = "b", lty = 2)
-
+#Adding in comments
 
 ## see data and poisson distribution
 
